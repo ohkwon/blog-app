@@ -1,15 +1,16 @@
+<h1>Sign Up!</h1>
 <%= form_tag '/signup', method: :post do %>
-  <div>
+  <div class='form-group'>
     <%= label_tag :email %>
-    <%= text_field_tag :email, "", placeholder: "Email Address!" %>
+    <%= text_field_tag :email, "", placeholder: "Email Address!", class: "form-control" %>
   </div>
-  <div>
+  <div class='form-group'>
     <%= label_tag :password %>
-    <%= password_field_tag :password, "", placeholder: "Password" %>
+    <%= password_field_tag :password, "", placeholder: "Password", class: "form-control" %>
   </div>
-  <div>
+  <div class='form-group'>
     <%= label_tag :password_confirmation %>
-    <%= password_field_tag :password_confirmation, "", placeholder: "Password Confirmation" %>
+    <%= password_field_tag :password_confirmation, "", placeholder: "Password Confirmation", class: "form-control" %>
   </div>
   <div>
     <%= submit_tag "Create Account!" %>
