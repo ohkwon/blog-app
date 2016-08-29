@@ -1,0 +1,2 @@
+class CategorizedPostsController < ApplicationController
+end
