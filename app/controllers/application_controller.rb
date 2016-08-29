@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base
     User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
+  def authenticate_user!
+    if current_user
+
+    else
+      redirect_to '/login'
+    end
+  end
+
 end
