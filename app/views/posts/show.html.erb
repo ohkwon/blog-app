@@ -6,4 +6,6 @@
   </div>
 </div>
 
-<%= link_to "Add Category to Post!", "/categorized_posts/#{@post.id}/new" %>
+<p><%= link_to "Add Category to Post!", "/categorized_posts/#{@post.id}/new" %></p>
+<p><%= link_to "Edit Post!", "/posts/#{@post.id}/edit" %></p>
+<p><%= link_to "Delete Post!", "/posts/#{@post.id}", method: :delete %></p>

@@ -1,0 +1,18 @@
+<h1>Edit Post</h1>
+<%= form_tag "/posts/#{params[:id]}", method: :patch do %>
+  <div>
+    <%= hidden_field_tag :user_id, current_user.id %>
+    <%= hidden_field_tag :id, params[:id] %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :title %>
+    <%= text_field_tag :title, @post.title, placeholder: "Blog post Title", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :text %>
+    <%= text_field_tag :text, @post.text, placeholder: "Blog Post Contents", class: "form-control" %>
+  </div>
+  <div>
+    <%= submit_tag "Edit Blog Post!" %>
+  </div>
+<% end %>
