@@ -5,7 +5,7 @@
   </tr>
   <% @posts.each do |post| %>
     <tr>
-      <td><%= post.title %></td>
+      <td><%= link_to post.title, "/posts/#{post.id}" %></td>
       <td><%= post.text %></td>
     </tr>
   <% end %>

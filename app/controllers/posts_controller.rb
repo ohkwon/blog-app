@@ -17,7 +17,7 @@ class PostsController < ApplicationController
       user_id: current_user.id
       )
     if post.save
-      redirect_to '/posts/#{post.id}'
+      redirect_to "/posts/#{post.id}"
     else
       redirect_to '/posts/new'
     end

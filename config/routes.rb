@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   get '/categories/new', to: 'categories#new'
   post '/categories', to: 'categories#create'
 
+  get '/categorized_posts/:id/new', to: 'categorized_posts#new'
+  post '/categorized_posts/:id', to: 'categorized_posts#create'
+
 end
